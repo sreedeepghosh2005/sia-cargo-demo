@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIA Cargo Services | Freight forwarding and warehousing in Riga, Latvia</title>
+<meta name="description" content="SIA Cargo Services: road, ocean, air and railway freight, and customs bonded warehousing in Riga Port, Latvia. Established 2001.">
+<meta name="theme-color" content="#f05a28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<!-- intro: animated logo -->
+<div id="intro" role="presentation">
+  <div class="logo animate" id="introLogo">
+    <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"></svg>
+    <div class="word"><span class="l1" data-split>Cargo</span><span class="l2">Services</span></div>
+  </div>
+  <div class="skip">Tap anywhere to skip</div>
+</div>
+
+<svg id="route" aria-hidden="true"><path class="base"/><path class="trail"/></svg>
+<div id="craft" aria-hidden="true">
+  <svg class="plane" viewBox="0 0 40 40"><path d="M20 2.500c1.700 0 2.800 3 2.800 7.200v5.300L37 23.500v3.800l-14.200-4.200-.5 8.400 5.200 3.700v2.800L20 35.800 12.500 38v-2.800l5.200-3.700-.5-8.400L3 27.300v-3.800L17.200 15V9.700c0-4.200 1.100-7.200 2.800-7.200z" fill="#f05a28" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+  <svg class="ship" viewBox="0 0 40 40"><path d="M20 1.500c5 5.500 7.500 10.500 7.500 15.500v17.500a4 4 0 01-4 4h-7a4 4 0 01-4-4V17c0-5 2.500-10 7.500-15.500z" fill="#231f20" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><rect x="15.200" y="15" width="9.600" height="4.600" rx="1" fill="#f05a28"/><rect x="15.200" y="20.800" width="9.600" height="4.600" rx="1" fill="#fff"/><rect x="15.200" y="26.600" width="9.600" height="4.600" rx="1" fill="#f05a28"/><rect x="16.500" y="33" width="7" height="2.600" rx="1" fill="#fff"/></svg>
+</div>
+
+
+<header class="site-header" id="header">
+  <div class="wrap bar">
+    <a href="index.html" class="logo" aria-label="SIA Cargo Services, home">
+      <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"></svg>
+      <div class="word"><span class="l1">Cargo</span><span class="l2">Services</span></div>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a class="link" style="--i:0" href="services.html">Services</a>
+      <a class="link" style="--i:1" href="about.html">About</a>
+      <a class="link" style="--i:2" href="clients.html">Clients</a>
+      <a class="link" style="--i:3" href="careers.html">Careers</a>
+      <a class="link" style="--i:4" href="contact.html">Contact</a>
+      <a class="btn btn-primary" href="contact.html#enq">Send an enquiry</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="pill fade" style="--i:0"><i></i>Riga, Latvia &nbsp;·&nbsp; Established 2001</div>
+        <h1>
+          <span class="ln"><span style="--i:1">Your cargo.</span></span>
+          <span class="ln"><span style="--i:2">Europe to the <em>CIS</em>.</span></span>
+          <span class="ln"><span style="--i:3">Safe and on time.</span></span>
+        </h1>
+        <p class="lead fade" style="--i:4">We forward cargo by road, sea, air and rail, and store it in customs bonded warehouses inside Riga Port. One team handles the transport, the storage and the documents.</p>
+        <div class="cta fade" style="--i:5">
+          <a class="btn btn-primary" href="contact.html#enq">Send an enquiry
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost" href="services.html">See our services</a>
+        </div>
+      </div>
+
+      <div class="globe-wrap fade" style="--i:4">
+        <div class="globe" id="globe" aria-label="Globe showing our routes: Mumbai and Antwerp to Riga, and Riga to Moscow, Minsk and Kyiv">
+          <canvas></canvas>
+        </div>
+        <div class="globe-hint">Drag the globe to turn it</div>
+      </div>
+    </div>
+
+    <div class="stats rv">
+      <div class="stat"><b data-count="2001">2001</b><span>The year we started in Riga</span></div>
+      <div class="stat"><b><span data-count="100">100</span><small>%</small></b><span>Demurrage free for FCLs arriving in Riga</span></div>
+      <div class="stat"><b><span data-count="24">24</span><small>×7</small></b><span>Guarded warehouse inside Riga Port</span></div>
+      <div class="stat"><b data-count="4">4</b><span>Freight modes: road, sea, air, rail</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head-row rv">
+      <div class="eyebrow">What we do</div>
+      <h2 class="title">One partner for the full journey</h2>
+      <p class="lead">From the point of production to your customer's distribution centre. Road, sea, air and rail freight, with warehousing in Riga Port.</p>
+    </div>
+    <div class="grid3">
+      <article class="svc rv" style="--d:0"><span class="n">01</span>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M2.5 6.500h11.500v10H2.500z"/><path d="M14 10h4l3.500 3.500V16.500H14z"/><circle cx="7" cy="17.500" r="2"/><circle cx="17.500" cy="17.500" r="2"/></svg></div>
+        <h3>Road transport</h3>
+        <p>We transport your cargo safely and swiftly by road, from anywhere in Europe to the CIS or the other way. Our specialists take utmost care of your cargo and its documentation, from the point of origin to the destination. The transport is smooth, safe and cost effective.</p></article>
+      <article class="svc rv" style="--d:1"><span class="n">02</span>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 14.500l1.800 5h14.400l1.800-5-9-3z"/><path d="M6 13.500V8h12v5.500"/><path d="M10 8V4.500h4V8"/><path d="M12 11.500v8"/></svg></div>
+        <h3>Ocean freight</h3>
+        <p>We meet the challenges and deadlines of your overseas shipping itinerary. We ship full container loads (FCL) and less than container loads (LCL) anywhere in the world, door to door, at competitive rates. You pay for sea freight only after the container arrives at its destination.</p></article>
+      <article class="svc rv" style="--d:2"><span class="n">03</span>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M17.800 19.200 16 11l3.500-3.500C21 6 21.500 4 21 3c-1-.5-3 0-4.500 1.500L13 8 4.800 6.200c-.5-.1-.9.1-1.100.5l-.3.5c-.2.5-.1 1 .3 1.300L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.500 5.300c.3.4.8.5 1.300.3l.5-.2c.4-.3.6-.7.5-1.200z"/></svg></div>
+        <h3>Air freight</h3>
+        <p>Expedited freight service to destinations around the world. Our airport-to-airport service suits customers with a high volume of business who need time-critical delivery.</p></article>
+      <article class="svc rv" style="--d:0"><span class="n">04</span>
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M9.500 7h5"/><path d="M8.500 21l1.500-4M15.500 21L14 17"/><path d="M9 14h.01M15 14h.01"/></svg></div>
+        <h3>Railway freight</h3>
+        <p>We are highly experienced in moving cargo by railway wagon throughout the CIS. Our railway specialists order the wagon at the point of origin and transport it to your destination. You get cargo tracking and highly competitive rates.</p></article>
+      <article class="svc rv" style="--d:1"><span class="n">05</span>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 21V9l9-5 9 5v12"/><path d="M7 21v-8h10v8"/><path d="M7 17h10"/></svg></div>
+        <h3>Warehousing</h3>
+        <p>Highly secure, customs bonded warehouses in Riga Port. We store chemicals, pharmaceuticals, engineering goods and other bulk goods. Our experienced staff give you cargo quantity and dispatch schedules, updated routinely by automated software.</p></article>
+      <a class="svc more rv" style="--d:2" href="services.html"><span class="n">+4</span>
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6.500" height="6.500" rx="1.500"/><rect x="13.500" y="4" width="6.500" height="6.500" rx="1.500"/><rect x="4" y="13.500" width="6.500" height="6.500" rx="1.500"/><rect x="13.500" y="13.500" width="6.500" height="6.500" rx="1.500"/></svg></div>
+        <h3>More services</h3>
+        <p>Value added operations, documentation, cargo destruction and banking services. Also how we work, and our three guarantees.</p>
+        <span class="go">See all services<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="how">
+  <div class="wrap about-grid">
+    <div class="txt">
+      <div class="rv">
+        <div class="eyebrow">About us</div>
+        <h2 class="title">Forwarding and warehousing since 2001</h2>
+      </div>
+      <div class="rv" style="--d:1;margin-top:22px">
+        <p>SIA "Cargo Services" (CS) is based in Riga, Latvia (Eastern Europe) and was established in the year 2001. Today our core business is cargo warehousing and forwarding.</p>
+        <p>Our responsibility runs from the time we expect product from you until your shipment is delivered to your customer, in good condition.</p>
+      </div>
+      <a class="btn btn-ghost teaser-btn rv" style="--d:2" href="about.html">More about us<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="quote rv" style="--d:1">
+      <svg class="q" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18v-6c0-4 2-6.500 6-7v3c-2 .5-3 1.800-3 4h3v6zm10 0v-6c0-4 2-6.500 6-7v3c-2 .5-3 1.800-3 4h3v6z"/></svg>
+      <p>We aren't satisfied until our customer is satisfied with the shipment.</p>
+      <span>It is simple: to keep our customers happy. CS is dedicated to customer service. We realise that we are only providing a service, a very important service. Total customer service, from start to finish, is our top priority.</span>
+    </div>
+  </div>
+</section>
+
+<section id="clients">
+  <div class="wrap">
+    <div class="head-row rv">
+      <div class="eyebrow">Our clients</div>
+      <h2 class="title">Some of our esteemed clients</h2>
+    </div>
+    <div class="grid4">
+      <div class="client rv" style="--d:0"><div class="ini">TI</div><h3>ZAO Transatlantic International</h3><p>Moscow, Russia</p></div>
+      <div class="client rv" style="--d:1"><div class="ini">W</div><h3>Wockhardt Limited</h3><p>Mumbai, India</p></div>
+      <div class="client rv" style="--d:2"><div class="ini">G</div><h3>Gemini Corporation N.V.</h3><p>Antwerp, Belgium</p></div>
+      <div class="client rv" style="--d:3"><div class="ini">N</div><h3>Nuplex Industries Limited</h3><p>Australia</p></div>
+    </div>
+    <div class="more-row rv"><a class="btn btn-ghost" href="clients.html">What we do for our clients<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </div>
+</section>
+
+<section class="dark cta-band">
+  <svg class="mark bgmark" viewBox="0 0 100 100" aria-hidden="true"></svg>
+  <div class="wrap band">
+    <div class="rv">
+      <div class="eyebrow">Get in touch</div>
+      <h2 class="title">Tell us about your cargo</h2>
+      <p class="lead">Send an enquiry, call, or write to either office.</p>
+    </div>
+    <div class="cta rv" style="--d:1">
+      <a class="btn btn-primary" href="contact.html#enq">Send an enquiry<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-ghost" href="careers.html">Careers</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="index.html" class="logo on-dark" aria-label="SIA Cargo Services, home">
+      <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"></svg>
+      <div class="word"><span class="l1">Cargo</span><span class="l2">Services</span></div>
+    </a>
+        <p>Cargo warehousing and forwarding from Riga, Latvia. Established 2001.</p>
+        <a class="social" href="https://www.linkedin.com/company/cargo-services-private-limited/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M4.980 3.500a2.500 2.500 0 11-.020 5 2.500 2.500 0 01.020-5zM3 9.750h4V21H3zM9.500 9.750h3.800v1.540h.050c.530-1 1.830-1.840 3.650-1.840 3.900 0 4.500 2.400 4.500 5.700V21h-4v-5.200c0-1.240-.020-2.840-1.800-2.840s-2.200 1.330-2.200 2.740V21h-4z"/></svg>Follow us on LinkedIn</a>
+      </div>
+      <nav class="col" aria-label="Footer">
+        <h4>Sitemap</h4>
+        <a href="index.html">Home</a><a href="about.html">About us</a><a href="services.html">Services</a><a href="clients.html">Our clients</a><a href="careers.html">Careers</a><a href="contact.html">Contact us</a>
+      </nav>
+      <div class="col">
+        <h4>Links</h4>
+        <a href="http://www.transport.lv/default.htm" target="_blank" rel="noopener">Overview of the transport sector in Latvia</a>
+        <a href="http://www.laff.lv/" target="_blank" rel="noopener">Latvian Freight Forwarding Association</a>
+        <a href="http://www.lda.gov.lv/" target="_blank" rel="noopener">Latvian Development Agency</a>
+      </div>
+    </div>
+    <div class="copy"><span>© <span id="yr">2026</span> SIA "Cargo Services". All rights reserved.</span><span>Design demo. Not the live website. &nbsp;·&nbsp; <a href="admin.html">Staff login</a></span></div>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+
+<script src="assets/site.js"></script>
+<script src="assets/globe.js"></script>
+</body>
+</html>

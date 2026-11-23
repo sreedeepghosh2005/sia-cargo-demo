@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin | SIA Cargo Services</title>
+<meta name="theme-color" content="#f05a28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+body{min-height:100vh;display:flex;flex-direction:column}
+main{animation:none;flex:1}
+.a-bar{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.a-bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;height:68px}
+.a-logo{display:inline-flex;align-items:center;gap:10px}
+.a-logo img{width:40px;height:40px}
+.a-logo .word .l1{font-size:23px}
+.a-logo .word .l2{font-size:15px;letter-spacing:1.9px}
+.a-badge{font-family:var(--head);font-weight:600;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);background:var(--orange-soft);padding:3px 9px;border-radius:6px;margin-left:6px}
+.a-user{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.a-user .who{font-size:13.5px;color:var(--muted);max-width:240px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.btn-sm{min-height:40px;padding:0 16px;font-size:14px}
+.btn-danger{background:#fff;border-color:#f3c4c0;color:#c0392b}
+.btn-danger:hover{background:#c0392b;border-color:#c0392b;color:#fff}
+.btn[disabled]{opacity:.55;pointer-events:none}
+[hidden]{display:none!important}
+
+.center{max-width:440px;margin:0 auto;padding:64px 20px}
+.center form h3{font-size:34px}
+.center .sub{margin-bottom:22px}
+.hint{font-size:13px;color:var(--muted);font-weight:400;margin-top:6px;display:block;line-height:1.45}
+.msg{display:none;align-items:flex-start;gap:10px;border-radius:12px;padding:12px 14px;font-size:14.5px;font-weight:500;margin:0 0 16px}
+.msg.show{display:flex;animation:rise .4s var(--ease)}
+.msg.err{background:#fdecea;color:#b03a2e}
+.msg.ok{background:#e8f6ee;color:#1e7e45}
+.msg.warn{background:var(--orange-soft);color:var(--orange-dark)}
+.rules{list-style:none;margin:0 0 18px;padding:0;font-size:13.5px;color:var(--muted)}
+.rules li{padding:3px 0 3px 24px;position:relative}
+.rules li::before{content:"";position:absolute;left:2px;top:9px;width:9px;height:9px;border-radius:50%;border:2px solid #cfc8c4}
+.rules li.good{color:#1e7e45}
+.rules li.good::before{background:#1e7e45;border-color:#1e7e45}
+
+.dash{padding:38px 0 80px}
+.dash-head{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;flex-wrap:wrap;margin-bottom:22px}
+.dash-head h1{font-size:clamp(34px,5vw,48px);text-transform:uppercase}
+.dash-head p{color:var(--muted);margin-top:6px;font-size:15px}
+.rows{display:grid;gap:12px}
+.jrow{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;transition:box-shadow .25s,border-color .25s}
+.jrow:hover{box-shadow:var(--shadow);border-color:#ddd6d2}
+.jrow h3{font-size:24px;text-transform:uppercase;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.jrow .meta{font-size:13.5px;color:var(--muted);margin-top:4px}
+.jrow .acts{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.pillst{font-family:var(--body);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border-radius:999px}
+.pillst.published{background:#e8f6ee;color:#1e7e45}
+.pillst.draft{background:#efebe8;color:var(--muted)}
+.confirm{font-size:14px;font-weight:500;color:#b03a2e}
+.empty{background:#fff;border:1px dashed #d8d1cd;border-radius:var(--radius);padding:40px 20px;text-align:center;color:var(--muted)}
+
+.editor{margin-bottom:22px}
+.editor form{box-shadow:var(--shadow-lg)}
+.editor textarea{min-height:120px}
+.editor .f-acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.editor form .btn{width:auto;margin-top:0}
+.f3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+@media(max-width:800px){.f3{grid-template-columns:1fr;gap:0}}
+@media(max-width:640px){
+  .a-user .who{display:none}
+  .a-user{flex-wrap:nowrap;gap:6px}
+  .a-bar .btn-sm{min-height:36px;padding:0 11px;font-size:12.5px}
+  .a-logo .word{display:none}
+  .a-bar .wrap{height:60px}
+  .jrow .acts,.jrow .acts .btn{width:100%}
+  .dash-head .btn{width:100%}
+  .editor form .btn{width:100%}
+}
+.a-foot{padding:18px 0;font-size:13px;color:var(--muted);border-top:1px solid var(--line);background:#fff}
+.a-foot a{color:var(--ink-2);border-bottom:1px solid var(--line)}
+</style>
+</head>
+<body>
+
+<div class="a-bar">
+  <div class="wrap">
+    <a class="a-logo logo" href="index.html" aria-label="Back to the website">
+      <img src="assets/favicon.svg" alt="">
+      <div class="word"><span class="l1">Cargo</span><span class="l2">Services</span></div>
+      <span class="a-badge">Admin</span>
+    </a>
+    <div class="a-user" id="userBox" hidden>
+      <span class="who" id="who"></span>
+      <button class="btn btn-ghost btn-sm" id="btnPw" type="button">Change password</button>
+      <button class="btn btn-ghost btn-sm" id="btnOut" type="button">Log out</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <!-- no server -->
+  <div class="center" id="viewOffline" hidden>
+    <div class="msg warn show">The admin page needs the server. Start it with "node server.js" in the website folder, then open http://127.0.0.1:3000/admin.html</div>
+  </div>
+
+  <!-- login -->
+  <div class="center" id="viewLogin" hidden>
+    <form id="loginForm" novalidate>
+      <h3>Staff login</h3>
+      <p class="sub">For Cargo Services staff. Use your @cargoservice.in email.</p>
+      <div class="msg err" id="loginMsg" role="alert"></div>
+      <label>Email<input name="email" type="email" autocomplete="username" inputmode="email" placeholder="name@cargoservice.in" required></label>
+      <label>Password<input name="password" type="password" autocomplete="current-password" required>
+        <span class="hint">First time here? Use the default password you were given. You will set your own password next.</span></label>
+      <button class="btn btn-primary" type="submit">Log in</button>
+    </form>
+  </div>
+
+  <!-- change password -->
+  <div class="center" id="viewPw" hidden>
+    <form id="pwForm" novalidate>
+      <h3 id="pwTitle">Set a new password</h3>
+      <p class="sub" id="pwSub">You must change the default password before you can manage job postings.</p>
+      <div class="msg err" id="pwMsg" role="alert"></div>
+      <label>Current password<input name="current" type="password" autocomplete="current-password" required></label>
+      <label>New password<input name="next" type="password" autocomplete="new-password" required></label>
+      <label>Repeat new password<input name="again" type="password" autocomplete="new-password" required></label>
+      <ul class="rules" id="rules">
+        <li data-rule="len">At least 8 characters</li>
+        <li data-rule="notDefault">Not the default password</li>
+        <li data-rule="match">Both new passwords match</li>
+      </ul>
+      <button class="btn btn-primary" type="submit">Save new password</button>
+      <button class="btn btn-ghost" type="button" id="pwCancel" style="margin-top:10px" hidden>Cancel</button>
+    </form>
+  </div>
+
+  <!-- dashboard -->
+  <div class="dash" id="viewDash" hidden>
+    <div class="wrap">
+      <div class="dash-head">
+        <div>
+          <div class="eyebrow">Careers</div>
+          <h1>Job postings</h1>
+          <p>Published postings show on the <a href="careers.html" target="_blank" rel="noopener" style="color:var(--orange);font-weight:600">careers page</a>. Drafts stay hidden.</p>
+        </div>
+        <button class="btn btn-primary" id="btnNew" type="button">+ New job posting</button>
+      </div>
+      <div class="msg ok" id="dashMsg" role="status"></div>
+
+      <div class="editor" id="editor" hidden>
+        <form id="jobForm" novalidate>
+          <h3 id="jobFormTitle">New job posting</h3>
+          <p class="sub">Put **two stars** around words to make them bold.</p>
+          <div class="msg err" id="jobMsg" role="alert"></div>
+          <div class="f2">
+            <label>Job title *<input name="title" maxlength="120" required></label>
+            <label>Company<input name="company" maxlength="120"></label>
+          </div>
+          <div class="f3">
+            <label>Location<input name="location" maxlength="120" placeholder="Mumbai, Maharashtra"></label>
+            <label>Team<input name="team" maxlength="80" placeholder="Freight Forwarding team"></label>
+            <label>Experience<input name="experience" maxlength="80" placeholder="2–5+ years of experience"></label>
+          </div>
+          <label>About the job<textarea name="about" maxlength="3000" placeholder="Leave an empty line between paragraphs"></textarea></label>
+          <div class="f2">
+            <label>What you'll do<textarea name="duties" placeholder="One point per line"></textarea></label>
+            <label>What we're looking for<textarea name="requirements" placeholder="One point per line"></textarea></label>
+          </div>
+          <div class="f3">
+            <label>Requirement (education)<input name="education" maxlength="120" placeholder="Bachelor's Degree"></label>
+            <label>Apply link<input name="applyUrl" maxlength="500" placeholder="https://… or mailto:…"></label>
+            <label>Status<select name="status"><option value="published">Published</option><option value="draft">Draft (hidden)</option></select></label>
+          </div>
+          <div class="f-acts">
+            <button class="btn btn-primary" type="submit" id="jobSave">Post job</button>
+            <button class="btn btn-ghost" type="button" id="jobCancel">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="rows" id="rows"></div>
+    </div>
+  </div>
+</main>
+
+<div class="a-foot"><div class="wrap">Design demo. <a href="index.html">Back to the website</a></div></div>
+
+<script src="assets/admin.js"></script>
+</body>
+</html>

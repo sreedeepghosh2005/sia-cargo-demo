@@ -1,0 +1,12 @@
+{
+  "name": "sia-cargo-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SIA Cargo Services demo website with a job postings admin page",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
